@@ -22,7 +22,7 @@ public class UserInterface {
 
             if(!scanner.hasNextInt()) {
                 String text = scanner.next();
-                System.out.printf(text + " Er ikke et gyldigt tal. Prøv igen. ");
+                System.out.printf(text + " Is not a valid number. Please try again. ");
 
             }
 
@@ -48,10 +48,10 @@ public class UserInterface {
             } else if (menuNumber == 2) {
                 ArrayList<Superhero> superheroListe = superheroDatabase.getSuperheroListe();
                 if (superheroListe.isEmpty()) {
-                    System.out.println("Ingen superhelte.");
+                    System.out.println("No superhero.");
 
                 } else {
-                    System.out.println("Liste over superhelte:");
+                    System.out.println("List of superheroes:");
                     for (Superhero superhero1 : superheroListe) {
                         if (superhero1 != null)
                             System.out.println(BLUE_BOLD + " Superhero: " + superhero1.getSuperheroName() + "\u001B[0m" + "\n" + " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" + " Abilities: " + superhero1.getAbilities() + "\n" + " Type: " + superhero1.getType());
