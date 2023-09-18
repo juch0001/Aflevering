@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     public static final String BLUE_BOLD = "\033[1;34m";  // blå
+    public static final String PURPLE_BOLD_BRIGHT = "\033[1;95m";
 
     public void startProgram() {
         Database superheroDatabase = new Database();
@@ -28,6 +29,7 @@ public class UserInterface {
 
 
             int menuNumber = scanner.nextInt();
+
 
             if (menuNumber == 1) {
                 Scanner superheroInput = new Scanner(System.in);
@@ -91,7 +93,7 @@ public class UserInterface {
 
 
             } else if (menuNumber == 9) {
-                System.out.println("We hope to see you again soon");
+                System.out.println(PURPLE_BOLD_BRIGHT + "We hope to see you again soon" + "\u001B[0m");
                 runProgram = false;
             }
         }

@@ -2,6 +2,8 @@ import javax.annotation.processing.SupportedOptions;
 import java.util.ArrayList;
 
 public class Database {
+    public static final String BLUE_BOLD = "\033[1;34m";
+
 
     private int count = 0;
 
@@ -32,7 +34,7 @@ public class Database {
             if (superhero!=null && superhero.getSuperheroName().equalsIgnoreCase(superheroName)){
                 superhero.setAbilities(newAbilities);
                 superhero.setType(newType);
-                System.out.println("Superhero information updated successfully.");
+                System.out.println(BLUE_BOLD + "Superhero information updated successfully." + "\u001B[0m");
                 return;
             }
         }
