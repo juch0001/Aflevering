@@ -27,6 +27,18 @@ public class Database {
         return superheroListe;
     }
 
+    public void editSuperhero(String superheroName, String newAbilities, String newType){
+        for (Superhero superhero:superheroListe) {
+            if (superhero!=null && superhero.getSuperheroName().equalsIgnoreCase(superheroName)){
+                superhero.setAbilities(newAbilities);
+                superhero.setType(newType);
+                System.out.println("Superhero information updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Superhero not found");
+    }
+
     public Superhero searchSuperhero(String superheroName) {
         for (Superhero superhero : superheroListe) {
             if (superhero != null && superhero.getSuperheroName().equalsIgnoreCase(superheroName)) {
@@ -36,6 +48,7 @@ public class Database {
         }
 
         return null;
+
     }
 }
 

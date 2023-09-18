@@ -35,6 +35,14 @@ public class Superhero {
         return type;
     }
 
+    public void setAbilities(String abilities) {
+        this.abilities=abilities;
+    }
+
+    public void setType(String type) {
+        this.type=type;
+    }
+
 
 
 }
